@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VanCard from "@/components/VanCard";
+import Vans from "@/components/Vans";
 
 export const metadata = {
   title: "Vanlife Camper Rental | Find the perfect camper",
@@ -12,7 +13,7 @@ export default function MainLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        <VanCard />
+        <Vans />
         <main>{children}</main>
         <Footer />
       </body>

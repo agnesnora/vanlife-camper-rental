@@ -88,6 +88,6 @@ const VanSchema = new Schema(
   }
 );
 
-const Van = models.Van || model.Van("Van", VanSchema);
+const Van = models.Van || model("Van", VanSchema);
 
 export default Van;

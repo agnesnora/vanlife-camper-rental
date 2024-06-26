@@ -1,0 +1,10 @@
+.navbar {
+  // Define the base class for the component
+  display: flex;
+
+  h1 {
+    // Nested selector targeting h1 elements within the .navbar class
+    color: plum;
+    background-color: darkslategrey;
+  }
+}

@@ -1,5 +1,3 @@
-import "./style.scss";
-
 const HomePage = () => {
   return (
     <main className="main-page">

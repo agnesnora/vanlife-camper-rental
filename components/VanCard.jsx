@@ -1,27 +1,34 @@
 import Image from "next/image";
 import React from "react";
-import image from "@/app/assets/images/t1.jpg";
-import "@/components/styles/VanCard.scss";
-
-const VanCard = () => {
+import styles from "@/components/styles/VanCard.module.scss";
+const VanCard = ({ van }) => {
   return (
-    <div>
+    <div className={styles.card}>
       <Image
-        src={image}
-        width={500}
-        height={500}
-        alt="Picture of the author"
-        style={{ objectFit: "cover" }}
+        className="main-image"
+        src={`/images/${van.images[0]}`}
+        alt={`Image of ${van.name}`}
+        width={200}
+        height={200}
+        style={{
+          width: " 300px",
+          height: "200px",
+          borderRadius: "20px",
+          objectFit: "cover",
+        }}
       />
+
       <div className="card-detail-container">
         <div className="card-detail-title">
-          <h1>Miskolc, HU</h1>
-          <h1>Rating 4.0</h1>
+          <h1>{van.location.city}</h1>
+          <h1>{van.stars}</h1>
         </div>
         <div className="card-detail-main">
-          <h1>Campervan Mercedes</h1>
-          <p>Seat 6 | Bed 5</p>
-          <p>from 100 Euro</p>
+          <h1>{van.name}</h1>
+          <p>
+            Seats: {van.seat} | Beds: {van.beds}
+          </p>
+          <p>{van.rates.monthly} EUR</p>
         </div>
         <button>Instant message</button>
       </div>

@@ -1,7 +1,10 @@
+import Link from "next/link";
+import HomePageHero from "@/components/HomePageHero";
 const HomePage = () => {
   return (
     <main className="main-page">
-      <h1>homepage</h1>
+      <Link href={"/vans"}>Go to vans</Link>
+      <HomePageHero />
     </main>
   );
 };

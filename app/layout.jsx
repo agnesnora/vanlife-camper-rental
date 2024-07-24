@@ -13,7 +13,7 @@ export default function MainLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
-        <Vans />
+        {/* <Vans /> */}
         <main>{children}</main>
         <Footer />
       </body>

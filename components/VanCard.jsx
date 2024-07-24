@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "@/components/styles/VanCard.module.scss";
+import Link from "next/link";
 const VanCard = ({ van }) => {
   return (
     <div className={styles.card}>
@@ -31,6 +32,7 @@ const VanCard = ({ van }) => {
           <p>{van.rates.monthly} EUR</p>
         </div>
         <button>Instant message</button>
+        <Link href={`vans/${van._id}`}>Details</Link>
       </div>
     </div>
   );
